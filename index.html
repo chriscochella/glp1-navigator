@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLP-1 Resource Guide | PEHP Health & Benefits</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1a3a5c;
+    --navy-dark: #122a42;
+    --blue: #4BA0D1;
+    --blue-light: #E8F4FB;
+    --blue-mid: #B5D4F4;
+    --amber: #EF9F27;
+    --amber-light: #FFF8ED;
+    --amber-border: #FAC775;
+    --green-light: #E8F5EE;
+    --green: #1D9E75;
+    --gray-bg: #F4F7FA;
+    --gray-border: #D8E4EE;
+    --text: #1a1a2e;
+    --text-muted: #555;
+    --text-light: #888;
+    --white: #ffffff;
+    --radius: 8px;
+    --radius-lg: 12px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+    background: var(--white);
+  }
+
+  /* ── NAV ── */
+  .nav {
+    background: var(--navy);
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo-pehp {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .nav-logo-pehp-main {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+  .nav-logo-pehp-main span { color: var(--blue); }
+  .nav-logo-pehp-sub {
+    font-size: 9px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .nav-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255,255,255,0.2);
+  }
+  .nav-guide-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.02em;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .nav-link {
+    color: rgba(255,255,255,0.65);
+    font-size: 12px;
+    padding: 0 14px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+  }
+  .nav-link:hover { color: #fff; }
+  .nav-link.active { color: #fff; border-bottom-color: var(--blue); }
+  .nav-cta {
+    background: var(--blue);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+    margin-left: 8px;
+    text-decoration: none;
+  }
+  .nav-cta:hover { background: #3a8fbf; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    min-height: 240px;
+  }
+  .hero-left { padding: 36px 36px 32px; }
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  .hero-h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero-h1 span { color: var(--blue); }
+  .hero-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.65;
+    margin-bottom: 24px;
+    max-width: 500px;
+  }
+  .hero-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--blue);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #3a8fbf; }
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.6); }
+  .hero-img {
+    background: #1f4570;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid rgba(255,255,255,0.07);
+    padding: 20px;
+    text-align: center;
+  }
+  .hero-img-icon { font-size: 52px; opacity: 0.25; }
+  .hero-img-label { font-size: 10px; color: rgba(255,255,255,0.3); line-height: 1.4; }
+
+  /* ── COVERAGE BANNER ── */
+  .coverage-banner {
+    background: var(--amber-light);
+    border-top: 3px solid var(--amber);
+    border-bottom: 1px solid var(--amber-border);
+    padding: 11px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .coverage-icon { font-size: 15px; color: #BA7517; flex-shrink: 0; }
+  .coverage-text { font-size: 12px; color: #633806; line-height: 1.5; }
+  .coverage-text strong { font-weight: 600; }
+  .coverage-link {
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: underline;
+    margin-left: 6px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  /* ── STATS ── */
+  .stats {
+    background: var(--gray-bg);
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--gray-border);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .stat-card {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-num span { color: var(--blue); }
+  .stat-label { font-size: 11px; color: var(--text-muted); line-height: 1.45; }
+  .stat-source { font-size: 10px; color: var(--text-light); margin-top: 4px; font-style: italic; }
+
+  /* ── MAIN LAYOUT ── */
+  .main { display: grid; grid-template-columns: 196px 1fr; }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--gray-bg);
+    border-right: 1px solid var(--gray-border);
+    padding: 24px 0;
+    position: sticky;
+    top: 56px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    align-self: start;
+  }
+  .sidebar-section { margin-bottom: 4px; }
+  .sidebar-heading {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 8px 20px 4px;
+  }
+  .sidebar-link {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 8px 20px;
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.1s, color 0.1s;
+  }
+  .sidebar-link:hover { background: #e6eff7; color: var(--navy); }
+  .sidebar-link.active {
+    color: var(--navy);
+    border-left-color: var(--blue);
+    background: #e6eff7;
+    font-weight: 600;
+  }
+  .sidebar-divider {
+    height: 1px;
+    background: var(--gray-border);
+    margin: 12px 20px;
+  }
+
+  /* ── CONTENT ── */
+  .content { padding: 0; }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 36px 40px 40px;
+    border-bottom: 1px solid var(--gray-border);
+    scroll-margin-top: 64px;
+  }
+  .section:last-child { border-bottom: none; }
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+  .section-h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  .section-rule {
+    width: 36px;
+    height: 3px;
+    background: var(--blue);
+    border-radius: 2px;
+    margin-bottom: 18px;
+  }
+  .section-intro {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 22px;
+    max-width: 680px;
+  }
+  .section-h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 24px 0 8px;
+  }
+  .section-body {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 16px;
+    max-width: 680px;
+  }
+
+  /* ── IMG PLACEHOLDER ── */
+  .img-ph {
+    background: var(--blue-light);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-lg);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .img-ph-icon { font-size: 32px; opacity: 0.4; }
+  .img-ph-label { font-size: 10px; color: var(--text-light); }
+
+  /* ── INFO CARDS ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .info-card {
+    background: var(--gray-bg);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+  }
+  .info-card-icon { font-size: 18px; margin-bottom: 8px; }
+  .info-card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .info-card-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── FAQ ── */
+  .faq-list {
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: 4px;
+  }
+  .faq-item { border-bottom: 1px solid var(--gray-border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    padding: 15px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    background: var(--white);
+    line-height: 1.4;
+    transition: background 0.12s;
+    user-select: none;
+  }
+  .faq-q:hover { background: var(--blue-light); }
+  .faq-q.open { background: var(--blue-light); }
+  .faq-chevron {
+    font-size: 14px;
+    color: var(--blue);
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: transform 0.2s;
+    display: inline-block;
+  }
+  .faq-chevron.open { transform: rotate(180deg); }
+  .faq-a {
+    padding: 0 18px 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    background: var(--white);
+    display: none;
+    border-top: 1px solid var(--gray-border);
+    padding-top: 14px;
+  }
+  .faq-a.open { display: block; }
+
+  /* ── BULLET LIST ── */
+  .bullet-list {
+    list-style: none;
+    margin: 10px 0 16px;
+    padding: 0;
+  }
+  .bullet-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .bullet-list li::before {
+    content: "✓";
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── CONSIDERATION BOX ── */
+  .consider-box {
+    background: var(--blue-light);
+    border: 1px solid var(--blue-mid);
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius-lg);
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .consider-box-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .consider-list { list-style: none; padding: 0; }
+  .consider-list li {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: #2a4a6a;
+    line-height: 1.6;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(75,160,209,0.2);
+  }
+  .consider-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .consider-list li::before {
+    content: "?";
+    background: var(--blue);
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── TABLES ── */
+  .table-section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 28px 0 10px;
+    padding-left: 2px;
+  }
+  .table-wrap {
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  thead th {
+    background: var(--navy);
+    color: #fff;
+    text-align: left;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+  }
+  thead th:first-child { border-radius: 0; }
+  tbody td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--gray-border);
+    color: var(--text);
+    vertical-align: middle;
+    line-height: 1.4;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) td { background: var(--gray-bg); }
+  tbody td:first-child { font-weight: 600; color: var(--navy); background: #eef3f8; }
+  tbody tr:nth-child(even) td:first-child { background: #e6eff7; }
+  .td-yes { color: #085041; font-weight: 600; }
+  .td-no { color: #888; }
+  .td-note { font-size: 10px; color: var(--text-light); display: block; }
+
+  /* ── ORDERLYMEDS CALLOUT ── */
+  .om-callout {
+    background: var(--green-light);
+    border: 1px solid #9FE1CB;
+    border-left: 4px solid var(--green);
+    border-radius: var(--radius-lg);
+    padding: 18px 22px;
+    margin: 24px 0;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .om-star { font-size: 22px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
+  .om-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #085041;
+    margin-bottom: 5px;
+  }
+  .om-text { font-size: 12px; color: #0F6E56; line-height: 1.65; }
+  .om-badge {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: var(--radius);
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  /* ── COMPOUND BOX ── */
+  .compound-box {
+    background: var(--gray-bg);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .compound-box-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .compound-standards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+    margin-top: 10px;
+  }
+  .compound-standard {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .compound-standard::before {
+    content: "✓";
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  /* ── NEXT STEPS ── */
+  .next-steps {
+    background: var(--navy);
+    margin: 36px 40px;
+    border-radius: var(--radius-lg);
+    padding: 32px 36px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px;
+    align-items: center;
+  }
+  .ns-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+  .ns-h {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .ns-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
+  .ns-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .ns-btn-p {
+    background: var(--blue);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .ns-btn-s {
+    background: transparent;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .ns-qr {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 90px;
+  }
+  .ns-qr-icon { font-size: 52px; color: var(--navy); line-height: 1; }
+  .ns-qr-label { font-size: 9px; color: var(--navy); font-weight: 600; text-align: center; line-height: 1.3; }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    background: var(--gray-bg);
+    border-top: 1px solid var(--gray-border);
+    padding: 14px 40px;
+    font-size: 10px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--navy);
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .fc-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .fc-link {
+    display: block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 7px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .fc-link:hover { color: var(--blue); }
+  .footer-bottom {
+    background: var(--navy-dark);
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .fb-brand {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+  }
+  .fb-disc {
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.45;
+    text-align: right;
+  }
+
+  /* ── HIGHLIGHT ── */
+  .highlight-stat {
+    background: var(--blue-light);
+    border-radius: var(--radius);
+    padding: 4px 8px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  /* ── SECTION CALLOUT ── */
+  .section-callout {
+    background: var(--amber-light);
+    border: 1px solid var(--amber-border);
+    border-left: 4px solid var(--amber);
+    border-radius: var(--radius-lg);
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #633806;
+    line-height: 1.6;
+  }
+  .section-callout strong { color: #412402; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-pehp">
+      <div class="nav-logo-pehp-main">P<span>E</span>HP</div>
+      <div class="nav-logo-pehp-sub">Health &amp; Benefits</div>
+    </div>
+    <div class="nav-divider"></div>
+    <div class="nav-guide-label">GLP-1 Resource Guide</div>
+  </a>
+  <div class="nav-links">
+    <a href="#overview" class="nav-link active" onclick="setActive(this,'overview')">Overview</a>
+    <a href="#about" class="nav-link" onclick="setActive(this,'about')">About GLP-1</a>
+    <a href="#qa" class="nav-link" onclick="setActive(this,'qa')">Q&amp;A</a>
+    <a href="#program" class="nav-link" onclick="setActive(this,'program')">Choosing a program</a>
+    <a href="#compare" class="nav-link" onclick="setActive(this,'compare')">Comparing options</a>
+  </div>
+  <a href="#nextsteps" class="nav-cta">Find a provider</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Medical weight loss resource</div>
+    <div class="hero-h1">Curious about <span>GLP-1?</span><br>Start here.</div>
+    <div class="hero-sub">GLP-1 medications are changing how people approach weight loss. This guide gives you clear, honest answers — what these medications are, what they cost, and how to explore them safely on your own terms.</div>
+    <div class="hero-btns">
+      <a href="#overview" class="btn-primary" style="background:var(--blue);color:var(--navy);">Explore your options</a>
+      <a href="#qa" class="btn-outline">See common questions</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <div class="hero-img-icon">🧬</div>
+    <div class="hero-img-label">Hero image<br>Member lifestyle photography</div>
+  </div>
+</div>
+
+<!-- COVERAGE BANNER -->
+<div class="coverage-banner">
+  <div class="coverage-icon">⚠</div>
+  <div class="coverage-text">
+    <strong>Coverage note:</strong> PEHP covers GLP-1 medications for members with Type 2 diabetes. For weight loss, most members are self-pay — but options exist.
+    <a href="#qa" class="coverage-link">What does PEHP cover? →</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">587<span>%</span></div>
+      <div class="stat-label">increase in GLP-1 prescriptions for obesity in non-diabetic patients, 2019–2024</div>
+      <div class="stat-source">FAIR Health, 2025</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">12.4<span>%</span></div>
+      <div class="stat-label">of U.S. adults now taking a GLP-1 specifically for weight loss — up from 5.8% one year prior</div>
+      <div class="stat-source">Gallup, Oct 2025</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">$134</div>
+      <div class="stat-label">per month via accredited compound pharmacy vs. $900+ retail for brand-name GLP-1</div>
+      <div class="stat-source">OrderlyMeds, 2025</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">15<span>%</span></div>
+      <div class="stat-label">average body weight reduction reported in clinical trials for semaglutide</div>
+      <div class="stat-source">NEJM, 2021</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-heading">On this page</div>
+      <a href="#overview" class="sidebar-link active" onclick="setSidebar(this,'overview')">Overview</a>
+      <a href="#about" class="sidebar-link" onclick="setSidebar(this,'about')">About GLP-1</a>
+      <a href="#qa" class="sidebar-link" onclick="setSidebar(this,'qa')">Q&amp;A</a>
+      <a href="#program" class="sidebar-link" onclick="setSidebar(this,'program')">Choosing a program</a>
+      <a href="#compare" class="sidebar-link" onclick="setSidebar(this,'compare')">Comparing options</a>
+      <div class="sidebar-divider"></div>
+      <a href="#nextsteps" class="sidebar-link" onclick="setSidebar(this,'nextsteps')">Next steps</a>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- OVERVIEW -->
+    <div class="section" id="overview">
+      <div class="section-eyebrow">Overview</div>
+      <div class="section-h2">What is medical weight loss?</div>
+      <div class="section-rule"></div>
+      <div class="img-ph">
+        <div class="img-ph-icon">🏥</div>
+        <div class="img-ph-label">Image — wellness or member consultation photography</div>
+      </div>
+      <p class="section-intro">Medical weight loss refers to healthcare-guided approaches that may include nutrition, movement, behavior change, sleep improvement, counseling, and prescription medications. GLP-1 medications are among the most widely discussed prescription options today — and you don't need a diabetes diagnosis to explore whether they're right for you.</p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="info-card-icon">👤</div>
+          <div class="info-card-title">Who this guide is for</div>
+          <div class="info-card-text">PEHP members who are curious about GLP-1 medications and want clear, unbiased information before talking to a provider or making a decision.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">📋</div>
+          <div class="info-card-title">How to use this resource</div>
+          <div class="info-card-text">Read through at your own pace, jump to any section using the left navigation, or go straight to the Q&amp;A for quick answers to common questions.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">💊</div>
+          <div class="info-card-title">Prescription options available</div>
+          <div class="info-card-text">Options include GLP-1 medications, older appetite-suppressing medications, combination therapies, and compounded formulations — each with different cost and oversight profiles.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">🔒</div>
+          <div class="info-card-title">Medical supervision matters</div>
+          <div class="info-card-text">All GLP-1 programs require a prescription from a licensed provider. This guide helps you ask the right questions and choose a program with proper oversight.</div>
+        </div>
+      </div>
+
+      <div class="section-callout" style="margin-top:24px;">
+        <strong>This guide is for educational purposes only.</strong> It does not constitute medical advice. Always consult a licensed healthcare provider before starting any medication program.
+      </div>
+    </div>
+
+    <!-- ABOUT GLP-1 -->
+    <div class="section" id="about">
+      <div class="section-eyebrow">About GLP-1</div>
+      <div class="section-h2">What are GLP-1 medications?</div>
+      <div class="section-rule"></div>
+      <div class="img-ph">
+        <div class="img-ph-icon">💉</div>
+        <div class="img-ph-label">Image — medication or clinical graphic</div>
+      </div>
+
+      <div class="section-h3">Why are people using GLP-1 medications?</div>
+      <p class="section-body">People explore GLP-1 medications for a variety of personal health, wellness, and weight-management reasons — including reducing weight, improving body composition, supporting long-term health goals, and managing appetite or cravings. Medical research has shown GLP-1s to be an effective tool for weight loss. They have also been shown to help with joint pain, sleep apnea, and cardiovascular disease, among other conditions.</p>
+
+      <div class="section-h3">What results could I expect?</div>
+      <p class="section-body">Results vary widely depending on the individual, dosage, nutrition, activity level, and consistency. Individuals report reduced appetite, gradual weight reduction, improved mobility, and improved metabolic health. Clinical trials for semaglutide showed an average body weight reduction of approximately 15% over 68 weeks. Keep in mind: weight regain may occur after stopping medication, and muscle mass can be lost alongside fat loss without changes in habits.</p>
+
+      <div class="section-h3">How can lifestyle support my results?</div>
+      <p class="section-body">Medical weight loss medications are most effective when combined with long-term lifestyle habits, including a balanced diet, adequate protein intake, exercise and movement, strength training, sleep, and stress management. Medication works best as part of a broader health strategy, not as a standalone solution.</p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="info-card-icon">⚠️</div>
+          <div class="info-card-title">Who should not take GLP-1 medications?</div>
+          <div class="info-card-text">GLP-1 medications may not be appropriate for people with certain thyroid cancers, MEN2, a history of pancreatitis, severe gastrointestinal disease, pregnancy, or certain eating disorders. Consult your healthcare provider before starting.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">🤢</div>
+          <div class="info-card-title">Common side effects</div>
+          <div class="info-card-text">Side effects may include nausea, vomiting, diarrhea, constipation, reduced appetite, fatigue, dehydration, and loss of muscle mass alongside weight loss. Side effects vary by individual and by which GLP-1 medication is prescribed.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q&A -->
+    <div class="section" id="qa">
+      <div class="section-eyebrow">Common questions</div>
+      <div class="section-h2">Your questions, answered</div>
+      <div class="section-rule"></div>
+      <p class="section-intro">These are the questions most people ask before deciding whether to explore GLP-1 medications. Click any question to expand the answer.</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do I need a diabetes diagnosis to use GLP-1 for weight loss?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            No. While GLP-1 medications were originally developed for Type 2 diabetes, the FDA has approved specific formulations — including Wegovy (semaglutide) and Zepbound (tirzepatide) — specifically for chronic weight management in adults with obesity or overweight with at least one weight-related condition. You do not need a diabetes diagnosis to be prescribed a GLP-1 for weight loss, though a licensed provider must evaluate your eligibility based on your health history.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What does PEHP cover — and what would I pay out of pocket?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            PEHP covers GLP-1 medications for members with a confirmed Type 2 diabetes diagnosis. Coverage for weight loss use is not included for most members — meaning you would pay out of pocket. Brand-name medications like Wegovy or Zepbound can run $900–$1,300 per month at retail. However, through telehealth providers that partner with accredited compound pharmacies, members can often access medically supervised GLP-1 programs for significantly less. The comparison tables in this guide walk through those options side by side.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What results can I realistically expect?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            Results vary widely based on your starting weight, dosage, diet, activity level, and consistency. Clinical trials for semaglutide showed an average body weight reduction of approximately 15% over 68 weeks. Tirzepatide trials showed up to 20–22% in some participants. Most people report reduced appetite within the first few weeks, with meaningful weight reduction becoming visible over 12–16 weeks. It is important to pair medication with sustainable lifestyle changes, as weight regain is common after stopping.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What are the most common side effects?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            The most frequently reported side effects are gastrointestinal — nausea, vomiting, diarrhea, and constipation. These are most common when starting the medication or increasing dosage and typically lessen over time. Starting at a low dose and increasing gradually (titration) reduces these effects significantly. Less common but more serious side effects include pancreatitis, gallbladder issues, and changes in heart rate. Your provider will review your full health history before prescribing to assess your risk.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Who should not take GLP-1 medications?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            GLP-1 medications are not appropriate for everyone. They are generally not recommended for people with a personal or family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2 (MEN2). They are also not recommended during pregnancy or breastfeeding. People with a history of pancreatitis, severe gastrointestinal conditions, or certain eating disorders should discuss risks carefully with their provider. Always share your full health history before starting any new medication.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What should I discuss with my healthcare provider before starting?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            Before starting a GLP-1 program, discuss your full medical history — including any history of thyroid disease, pancreatitis, kidney conditions, eating disorders, or mental health concerns. Ask which medication and starting dosage is right for your situation, what a realistic titration schedule looks like, what lab work or monitoring will be required, and how the medication interacts with anything you currently take. If using a telehealth provider, confirm that a licensed clinician is personally reviewing your case, not just an automated intake form.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How do I find a provider I can trust?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            Start with your primary care provider — they know your health history and can prescribe GLP-1 medications if appropriate. If your PCP does not prescribe them, look for telehealth platforms that include a licensed clinician review (not just an automated intake). Key things to verify: Is a licensed MD, NP, or PA personally reviewing your case? Do they offer ongoing monitoring and dose adjustments? Is their partner pharmacy accredited? Avoid platforms that ship medication without a proper clinical consultation.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What happens if I stop taking GLP-1 medication?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            Research shows that most people regain a significant portion of lost weight after stopping GLP-1 medications — often within 12 months. This is because the medication is addressing a biological mechanism that regulates appetite and metabolism. This does not mean GLP-1s should not be used, but it is an important consideration when evaluating long-term commitment and cost. Ask your provider about a long-term maintenance plan, and consider pairing medication with durable lifestyle habits to reduce regain risk.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How do nutrition and fitness support my GLP-1 results?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            GLP-1 medications are most effective when combined with long-term lifestyle habits. A balanced diet with adequate protein helps preserve muscle mass during weight loss. Regular movement and strength training improve metabolic health and reduce the risk of muscle loss alongside fat loss. Quality sleep and stress management support hormonal balance and reduce cravings. Think of the medication as the foundation — lifestyle habits are what make results sustainable.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What are compounding pharmacies and are they safe?
+            <span class="faq-chevron">▾</span>
+          </div>
+          <div class="faq-a">
+            Compounding pharmacies produce customized formulations of medications — including semaglutide and tirzepatide — that can significantly reduce cost compared to brand-name versions. When properly accredited, they are a legitimate and widely used option. The key is verification: only consider compounding pharmacies that are state-regulated, USP-compliant, cGMP-adherent, and either 503A-designated or operated within a 50-state network of licensed clinicians. Ask for documentation before ordering. OrderlyMeds, a PEHP partner, meets these standards and offers a 10% member discount.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CHOOSING A PROGRAM -->
+    <div class="section" id="program">
+      <div class="section-eyebrow">Choosing a program</div>
+      <div class="section-h2">What to look for before you decide</div>
+      <div class="section-rule"></div>
+      <div class="img-ph">
+        <div class="img-ph-icon">🩺</div>
+        <div class="img-ph-label">Image — provider consultation or decision-making photography</div>
+      </div>
+      <p class="section-intro">Not all GLP-1 programs are equal. Before you commit, use these questions and standards to evaluate any program — telehealth, PCP, or compound pharmacy.</p>
+
+      <div class="consider-box">
+        <div class="consider-box-title">Questions to ask before choosing a medical weight loss program</div>
+        <ul class="consider-list">
+          <li>What is the total monthly cost, including medication and fees?</li>
+          <li>Is the program insurance-based or cash-pay?</li>
+          <li>What medical evaluation, monitoring, and side-effect management are included?</li>
+          <li>Does the program provide nutrition, exercise, or behavioral support?</li>
+          <li>What results are realistic, and how is progress measured?</li>
+          <li>What happens if you stop treatment or leave the program?</li>
+        </ul>
+      </div>
+
+      <div class="section-h3">Understanding compounding pharmacies</div>
+      <p class="section-body">For self-pay members evaluating a GLP-1 program, clinical quality, regulatory compliance, and pharmacy integrity are essential. Compounding pharmacies may offer lower prices, but it is important to purchase from one that meets rigorous standards.</p>
+
+      <div class="compound-box">
+        <div class="compound-box-title">Only consider suppliers that operate with all of the following:</div>
+        <div class="compound-standards">
+          <div class="compound-standard">State-regulated pharmacies</div>
+          <div class="compound-standard">50-state network of licensed clinicians</div>
+          <div class="compound-standard">USP-compliant</div>
+          <div class="compound-standard">503A designated facilities</div>
+          <div class="compound-standard">cGMP-adherent</div>
+          <div class="compound-standard">Transparent, all-in pricing</div>
+        </div>
+      </div>
+
+      <p class="section-body" style="margin-top:14px;">Accredited compounding pharmacies offer transparent pricing — no upsells or subscription traps — and fast fulfillment: typically 24–48 hours after approval, with delivery in 5–7 days.</p>
+
+      <div class="om-callout">
+        <div class="om-star">★</div>
+        <div>
+          <div class="om-title">PEHP member exclusive — OrderlyMeds</div>
+          <div class="om-text">PEHP members have access to a special offer through OrderlyMeds, an accredited compounding pharmacy with licensed clinical oversight included, transparent all-in pricing, and fast fulfillment. OrderlyMeds meets all the standards listed above.<br><br><strong>PEHP members receive a 10% discount.</strong> Scan the QR code on your member flyer or use the link below to claim your rate.</div>
+          <a href="#" class="om-badge">Claim your PEHP member offer →</a>
+        </div>
+      </div>
+
+      <div class="card-grid" style="margin-top:24px;">
+        <div class="info-card">
+          <div class="info-card-icon">🚩</div>
+          <div class="info-card-title">Red flags to avoid</div>
+          <div class="info-card-text">No licensed clinician review before prescribing. No ongoing monitoring or dose adjustments. No verifiable pharmacy accreditation. Pressure to commit upfront or hidden fees after signup.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">📅</div>
+          <div class="info-card-title">Plan for the long term</div>
+          <div class="info-card-text">Ask every provider about a maintenance plan before you start. What happens at month 6? Month 12? What support is included if you want to taper off? The best programs plan beyond the prescription.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARING OPTIONS -->
+    <div class="section" id="compare">
+      <div class="section-eyebrow">Comparing options</div>
+      <div class="section-h2">Programs at a glance</div>
+      <div class="section-rule"></div>
+      <p class="section-intro">These tables compare commonly discussed pathways for obtaining GLP-1 medications. This is not a comprehensive list, and it is not an endorsement of any specific provider. Programs, pricing, medication availability, dosages, and regulatory status may change over time — always verify directly with the provider.</p>
+
+      <div class="table-section-label">Semaglutide — provider comparison</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Semaglutide</th>
+              <th>OrderlyMeds</th>
+              <th>Novo Nordisk (Wegovy)</th>
+              <th>ro</th>
+              <th>TrumpRX | Walmart | Costco</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Source</td><td>Compounded</td><td>Wegovy (Novo Nordisk)</td><td>Wegovy (Novo Nordisk)</td><td>Same as ro</td></tr>
+            <tr><td>Delivery</td><td>Injection</td><td>Injection</td><td>Injection</td><td>Injection</td></tr>
+            <tr><td>Price per month</td><td><strong>$134</strong></td><td>$349</td><td>$399</td><td>$349</td></tr>
+            <tr><td>Dosage</td><td>All doses</td><td>.25–2.4 mg</td><td>.25–2.4 mg</td><td>.25–2.4 mg</td></tr>
+            <tr><td>Startup discounts</td><td class="td-yes">Yes</td><td class="td-yes">Yes</td><td class="td-yes">Yes</td><td class="td-yes">Yes</td></tr>
+            <tr><td>12 months of medication</td><td><strong>$1,609</strong></td><td>$4,188</td><td>$4,788</td><td>$4,188</td></tr>
+            <tr><td>Membership fee</td><td>$0</td><td>$0</td><td>$74/month <span class="td-note">annual commitment</span></td><td>$0</td></tr>
+            <tr><td>Telehealth visit included <span class="td-note">Typically 100+ visits</span></td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-yes">Yes <span class="td-note">with $74 membership</span></td><td class="td-no">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-section-label">Tirzepatide — provider comparison</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tirzepatide</th>
+              <th>OrderlyMeds</th>
+              <th>Lilly Direct (Zepbound)</th>
+              <th>ro</th>
+              <th>TrumpRX | Walmart | Costco</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Source</td><td>Compounded</td><td>Zepbound (Eli Lilly)</td><td>Zepbound (Eli Lilly)</td><td>Zepbound (Eli Lilly)</td></tr>
+            <tr><td>Delivery</td><td>Injection</td><td>Injection</td><td>Injection</td><td>Injection</td></tr>
+            <tr><td>Price per month</td><td><strong>$299</strong></td><td>$449</td><td>$449</td><td>$449</td></tr>
+            <tr><td>Dosage</td><td>All doses</td><td>7.5–15 mg</td><td>7.5–15 mg</td><td>7.5–15 mg</td></tr>
+            <tr><td>Startup discounts</td><td class="td-yes">Yes</td><td class="td-yes">Yes</td><td class="td-yes">Yes</td><td class="td-yes">Yes</td></tr>
+            <tr><td>12 months of medication</td><td><strong>$3,588</strong></td><td>$5,388</td><td>$6,276</td><td>$5,388</td></tr>
+            <tr><td>Membership fee</td><td>$0</td><td>$0</td><td>$74/month <span class="td-note">annual commitment</span></td><td>$0</td></tr>
+            <tr><td>Telehealth visit included <span class="td-note">Typically 100+ visits</span></td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-yes">Yes <span class="td-note">with $74 membership</span></td><td class="td-no">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-section-label">Benefits included in price — all providers</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Benefit</th>
+              <th>OrderlyMeds</th>
+              <th>Lilly Direct</th>
+              <th>ro</th>
+              <th>TrumpRX | Walmart | Costco</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Pay with HSA/FSA</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-yes">Yes</td><td class="td-no">No</td></tr>
+            <tr><td>Prescription issue support</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-no">No</td><td class="td-no">No</td></tr>
+            <tr><td>Shipping included</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-yes">Yes</td><td class="td-no">No</td></tr>
+            <tr><td>Price same over all dosages</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-no">No</td><td class="td-no">No</td></tr>
+            <tr><td>Ongoing support</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-yes">Yes</td><td class="td-no">No</td></tr>
+            <tr><td>Online community &amp; education</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-yes">Yes</td><td class="td-no">No</td></tr>
+            <tr><td>Access to dietitians &amp; nutritionists</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-yes">Yes</td><td class="td-no">No</td></tr>
+            <tr><td>Discounts on behavioral health, meals &amp; other support</td><td class="td-yes">Yes</td><td class="td-no">No</td><td class="td-no">No</td><td class="td-no">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-callout">
+        <strong>Note:</strong> Programs, pricing, medication availability, dosages, and regulatory status may change over time. Always verify current details directly with each provider before enrolling. Some options above include a telehealth qualification visit with a licensed healthcare provider — confirm this is included before purchasing.
+      </div>
+    </div>
+
+    <!-- NEXT STEPS -->
+    <div class="next-steps" id="nextsteps">
+      <div>
+        <div class="ns-eyebrow">Ready to move forward?</div>
+        <div class="ns-h">Your next step starts here.</div>
+        <div class="ns-text">If you are considering medical weight loss options, speak with a licensed healthcare provider about your health history, goals, current medications, and available treatment approaches. PEHP is happy to support you on your journey.</div>
+        <div class="ns-btns">
+          <a href="#" class="ns-btn-p">Find a provider</a>
+          <a href="#compare" class="ns-btn-s">Compare options</a>
+          <a href="#" class="ns-btn-s">Claim OrderlyMeds offer</a>
+        </div>
+      </div>
+      <div class="ns-qr">
+        <div class="ns-qr-icon">▦</div>
+        <div class="ns-qr-label">Scan to<br>share guide</div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      This resource is for educational purposes only and does not constitute medical advice. Consult a licensed healthcare provider before starting any medication program. PEHP coverage details are subject to change — contact your benefits administrator to confirm your specific plan coverage. Provider pricing and program details are current as of publication and may change without notice.
+    </div>
+
+  </div><!-- end content -->
+</div><!-- end main -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <div class="fc-title">Resource guide</div>
+    <a href="#overview" class="fc-link">Overview</a>
+    <a href="#about" class="fc-link">About GLP-1</a>
+    <a href="#qa" class="fc-link">Q&amp;A</a>
+    <a href="#program" class="fc-link">Choosing a program</a>
+    <a href="#compare" class="fc-link">Comparing options</a>
+  </div>
+  <div>
+    <div class="fc-title">PEHP member resources</div>
+    <a href="#" class="fc-link">Benefits overview</a>
+    <a href="#" class="fc-link">Coverage details</a>
+    <a href="#" class="fc-link">Contact your benefits team</a>
+    <a href="#" class="fc-link">OrderlyMeds member offer</a>
+  </div>
+  <div>
+    <div class="fc-title">About this guide</div>
+    <a href="#" class="fc-link">How this guide is maintained</a>
+    <a href="#" class="fc-link">Medical review disclaimer</a>
+    <a href="#" class="fc-link">Sources &amp; references</a>
+    <a href="#" class="fc-link">Accessibility</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <div class="fb-brand">PEHP Health &amp; Benefits</div>
+  <div class="fb-disc">This resource is for educational purposes only and does not constitute medical advice. Consult a licensed provider before starting any medication program. Content reviewed periodically for accuracy.</div>
+</div>
+
+<script>
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const chevron = el.querySelector('.faq-chevron');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+    if (!isOpen) {
+      answer.classList.add('open');
+      el.classList.add('open');
+      chevron.classList.add('open');
+    }
+  }
+
+  function setActive(el, id) {
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.sidebar-link').forEach(l => {
+      l.classList.remove('active');
+      if (l.getAttribute('href') === '#' + id) l.classList.add('active');
+    });
+  }
+
+  function setSidebar(el, id) {
+    document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(l => {
+      l.classList.remove('active');
+      if (l.getAttribute('href') === '#' + id) l.classList.add('active');
+    });
+  }
+
+  // Scroll spy
+  const sections = ['overview','about','qa','program','compare','nextsteps'];
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 80) current = id;
+    });
+    document.querySelectorAll('.nav-link').forEach(l => {
+      l.classList.remove('active');
+      if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+    });
+    document.querySelectorAll('.sidebar-link').forEach(l => {
+      l.classList.remove('active');
+      if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
